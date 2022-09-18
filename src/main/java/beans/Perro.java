@@ -8,14 +8,14 @@ public class Perro {
     private String nombre;
     private String raza;
     private double peso;
-    private int idDueño;
+    private int idUsuario;
 
     public Perro(int idPerro, String nombre, String raza, double peso, int idDueño) {
         this.idPerro = idPerro;
         this.nombre = nombre;
         this.raza = raza;
         this.peso = peso;
-        this.idDueño = idDueño;
+        this.idUsuario = idDueño;
     }
 
     public int getIdPerro() {
@@ -50,17 +50,17 @@ public class Perro {
         this.peso = peso;
     }
 
-    public int getIdDueño() {
-        return idDueño;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setIdDueño(int idDueño) {
-        this.idDueño = idDueño;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     @Override
     public String toString() {
-        return "Perro{" + "idPerro=" + idPerro + ", nombre=" + nombre + ", raza=" + raza + ", peso=" + peso + ", idDue\u00f1o=" + idDueño + '}';
-    }
+        return "Perro{" + "idPerro=" + idPerro + ", nombre=" + nombre + ", raza=" + raza + ", peso=" + peso + ", idUsuario=" + idUsuario + '}';
+    }    
     
 }
