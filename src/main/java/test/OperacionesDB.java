@@ -3,6 +3,7 @@ package test;
 
 import beans.Empleado;
 import beans.Perro;
+import beans.Servicio;
 import beans.Usuario;
 import connection.DBConnection;
 import java.sql.ResultSet;
@@ -59,6 +60,30 @@ public class OperacionesDB {
                 
                 Empleado empleado = new Empleado(idEmpleado, nombres, apellidos);
                 System.out.println(empleado.toString());
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        finally {
+            con.desconectar();
+        }
+    }
+    
+    public static void listarServicios(){
+        DBConnection con = new DBConnection();
+        
+        String sql = "SELECT * FROM `servicios`";
+        try {
+            Statement st = con.getConnection().createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                int idServicio = rs.getInt("idServicio");
+                String nombre = rs.getString("nombre");
+                String descripcion = rs.getString("descripcion");
+                double precio = rs.getDouble("precio");
+                
+                Servicio servicio = new Servicio(idServicio, nombre, descripcion, precio);
+                System.out.println(servicio.toString());
             }
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
