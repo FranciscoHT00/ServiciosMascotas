@@ -1,6 +1,7 @@
 
 package test;
 
+import beans.Empleado;
 import beans.Perro;
 import beans.Usuario;
 import connection.DBConnection;
@@ -12,6 +13,7 @@ public class OperacionesDB {
     
     public static void main(String[] args) {
         listarPerrosPorUsuario(1);
+        listarEmpleados();
     }
     
     public static void actualizarUsuario(int idUsuario, Usuario pUsuario){
@@ -40,7 +42,29 @@ public class OperacionesDB {
         }
         finally {
             con.desconectar();
-        }
+        }        
+    }
+    
+    public static void listarEmpleados(){
+        DBConnection con = new DBConnection();
         
+        String sql = "SELECT * FROM `empleados`";
+        try {
+            Statement st = con.getConnection().createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                int idEmpleado = rs.getInt("idEmpleado");
+                String nombres = rs.getString("nombres");
+                String apellidos = rs.getString("apellidos");
+                
+                Empleado empleado = new Empleado(idEmpleado, nombres, apellidos);
+                System.out.println(empleado.toString());
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        finally {
+            con.desconectar();
+        }
     }
 }
