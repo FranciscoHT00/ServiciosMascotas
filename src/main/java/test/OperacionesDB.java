@@ -1,13 +1,16 @@
 
 package test;
 
+import beans.Cita;
 import beans.Empleado;
 import beans.Perro;
 import beans.Servicio;
 import beans.Usuario;
 import connection.DBConnection;
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Time;
 
 
 public class OperacionesDB {
@@ -91,5 +94,30 @@ public class OperacionesDB {
         finally {
             con.desconectar();
         }
+    }
+    
+    public static void listarCitasPorUsuario(int pIdUsuario){
+        DBConnection con = new DBConnection();
+        
+        String sql = "SELECT * FROM `citas` INNER JOIN `perros` ON `citas`.idPerro = `perros`.idPerro WHERE idUsuario = "+pIdUsuario;
+        try {
+            Statement st = con.getConnection().createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                int idPerro = rs.getInt("idPerro");
+                int idEmpleado = rs.getInt("idEmpleado");
+                Date fecha = rs.getDate("fecha");
+                Time hora = rs.getTime("hora");
+                int idServicio = rs.getInt("idServicio");
+                
+                Cita cita = new Cita(idPerro, idEmpleado, fecha, hora, idServicio);
+                System.out.println(cita.toString());
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        finally {
+            con.desconectar();
+        }        
     }
 }
