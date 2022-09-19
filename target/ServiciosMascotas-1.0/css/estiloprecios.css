@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/Fondo.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.Nav-Enlace{
+    display: inline-block;
+    background: salmon;
+    color: white;
+    padding: 10px 30px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    box-shadow: -5px -5px rgb(67, 62, 62);
+    border-radius: 20px;
+}
+.Nav-Enlace:hover{
+    background: red
+}
+nav{
+    background: rgb(226, 213, 213);
+    padding: 10px;
+    display: flex;
+    justify-content:space-around;
+    border: 1px solid white;
+    box-sizing: border-box;
+    box-shadow: -5px -5px rgb(67, 62, 62);
+    border-radius: 20px;
+}
+.Nav-Button{
+    background: salmon;
+    color: white;
+    padding: 10px 30px;
+    BORDER: 2px solid white;
+    display:none;
+    border: 1px solid black;
+    box-sizing: border-box;
+    box-shadow: -5px -5px rgb(67, 62, 62);
+    border-radius: 20px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h2{
+    font-weight: 800;
+}
+p{
+    font-weight: 300;
+}
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.text-center{
+    text-align: center;
+}
+.columna{
+    background: rgb(226, 213, 213);
+    color: #333;
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: -5px -5px rgb(67, 62, 62);
+    width: 22%;
+    box-sizing: border-box;
+}
+.precio{
+    font-size: 50px;
+    color: #000000
+}
+.btn-precio{
+    background: salmon;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.btn-precio:hover{
+    background: rgb(67, 62, 62)
+}
+
+.Usuario {
+    background: rgb(226, 213, 213);
+    padding: 10px;
+    display: flex;
+    justify-content:space-around;
+    border: 1px solid white;
+    box-sizing: border-box;
+    box-shadow: -5px -5px rgb(67, 62, 62);
+    border-radius: 5px;
+}
+@media (max-width: 600px){
+    nav{
+        background:black;
+        flex-direction: column;
+    }
+    .Nav-Enlace:hover{
+        margin: 10px 0;
+    }
+    .Nav-Button{
+        display: inline-block; 
+    }
+    .desaparece{
+        display: none;
+    }
+    .columna{
+        width: 45%;
+        margin-bottom: 10px;
+    }
+    .Usuario:hover{
+        margin: 10px 0;
+    }
+    form{
+        background:black;
+        flex-direction: column;
+    }
+    .Usuario-button{
+        display: inline-block; 
+    }
+}

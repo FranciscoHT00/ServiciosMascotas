@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="css/registro.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <form action="" method="POST" id="form">
+            <div class="form">
+
+                    <div class="login-box">
+                        <img class="muestra" src="img/logo.png" alt="Logo de fazt">
+                        <h1>Iniciar sesion</h1>
+                        
+                            <!-- USERNAME -->
+                                
+                                <label for="nombre de usuario">Nombre de usuario</label>
+                                <input type="text" placeholder="Usuario" name="" id ="nombre" required >  <span class="barra"></span> 
+                                
+                            <!-- PASSWORD -->
+                                
+                                <label for = "password">Contraseña</label>
+                                <input type="password" placeholder="Clave" name="" id="contraseña" required > <span class="barra"></span> 
+
+                                <label for = "password">Repetir Contraseña</label>
+                                <input type="password" placeholder=" Repetir Clave" name="" id="Repetir_Contraseña" required ><span class="barra"></span> 
+
+
+                                <label for = "correo">Ingrese un Correo</label>
+                                <input type="correo" placeholder="Correo" name="" id="correo" required > <span class="barra"></span> 
+                                
+                            <div class="date">
+                                <input type="date" class="barra">
+                            </div>
+                            
+
+
+                            <div class="switch-container">
+                                <a href="#">¿Acepta terminos y condiciones?</a> 
+                                <input type="checkbox" id="switch">
+                                <label for="switch" class="lbl"> </label>
+                            </div>
+
+
+
+                            <button type="submit">Registrar</button>
+                            <p class="warnings" id="warnings"></p>
+                            <a href="Recuperar.html">¿Olvidaste tu clave?</a><br>
+                            <a href="Login.html">Ya estas registrado?</a> 
+                            
+
+                        
+                    </div>
+                </div>
+         </form>
+    </body>
+    <script src="js/loginRegistro.js"></script>
+</html>
+
+

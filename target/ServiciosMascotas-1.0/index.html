@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
+        <link href="css/estiloprecios.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <nav>
+            <button class="Nav-Button" onclick="accion()">Menu</button>
+            <a href="#"class="Nav-Enlace desaparece">Inicio</a>
+            <a href="#"class="Nav-Enlace desaparece">Nosotros</a>
+            <a href="#"class="Nav-Enlace desaparece">Servicios</a>
+            <a href="#"class="Nav-Enlace desaparece">Contactos</a>
+            <a href="#"class="Nav-Enlace desaparece">Ingresar</a>
+        </nav>
+        <!-- responsive de la barra de navigation -->
+        <script>
+            function accion() {
+                 var ancla = document.getElementsByClassName("Nav-Enlace");
+                 for (var i = 0; i < ancla.length; i++){
+                    ancla[i].classList.toggle('desaparece');
+                 }
+            }
+        </script>
+
+
+
+
     </body>
 </html>

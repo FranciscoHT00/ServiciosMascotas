@@ -6,3 +6,5 @@ beans\Empleado.class
 beans\Cita.class
 servlets\PruebaServlet.class
 beans\ListaHorario.class
+test\OperacionesDB.class
+connection\DBConnection.class

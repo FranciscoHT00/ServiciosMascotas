@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Tabla de precios </title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
+        <link href="css/estiloprecios.css" rel="stylesheet">
+
+        
+        <!-- <link href="C:\Users\Androx\Desktop\bosetp\CSS\Estiloprecios.css" rel="stylesheet"> -->
+    </head>
+
+        <!-- Barra de Negacion de precios -->
+        <nav>
+            <button class="Nav-Button" onclick="accion()">Menu</button>
+            <a href="#"class="Nav-Enlace desaparece">Inicio</a>
+            <a href="#"class="Nav-Enlace desaparece">Nosotros</a>
+            <a href="#"class="Nav-Enlace desaparece">Servicios</a>
+            <a href="#"class="Nav-Enlace desaparece">Contactos</a>
+        </nav>
+        <!-- responsive de la barra de navigation -->
+        <script>
+            function accion() {
+                 var ancla = document.getElementsByClassName("Nav-Enlace");
+                 for (var i = 0; i < ancla.length; i++){
+                    ancla[i].classList.toggle('desaparece');
+                 }
+            }
+        </script>
+        <section class = "container flex text-center">
+            <div class = "columna"> 
+                <h2>Servicio perro</h2>
+                <p class ="precio">$500</p>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem est reprehenderit.</p>
+                <hr  
+                <p> Lorem ipsum dolor sit amet  </p>
+                <p> Lorem ipsum dolor sit  </p>
+                <hr>
+                <a href="#" class="btn-precio"> Comprar</a>
+            </div>
+            <div class = "columna"> 
+                <h2>Servicio un perro</h2>
+                <p class ="precio">$500</p>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem est reprehenderit.</p>
+                <hr>  
+                <p> Lorem ipsum dolor sit amet  </p>
+                <p> Lorem ipsum dolor sit  </p>
+                <hr>
+                <a href="#" class="btn-precio"> Comprar</a>
+            </div>
+            <div class = "columna"> 
+                <h2>Servicio 2 perros</h2>
+                <p class ="precio">$500</p>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem est reprehenderit.</p>
+                <hr  
+                <p> Lorem ipsum dolor sit amet  </p>
+                <p> Lorem ipsum dolor sit  </p>
+                <hr>
+                <a href="#" class="btn-precio"> Comprar</a>
+            </div>
+            <div class = "columna"> 
+                <h2>Servicio premium semanal</h2>
+                <p class ="precio">$500</p>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem est reprehenderit.</p>
+                <hr>  
+                <p> Lorem ipsum dolor sit amet  </p>
+                <p> Lorem ipsum dolor sit  </p>
+                <hr>
+                <a href="#" class="btn-precio"> Comprar</a>
+            </div>
+        </section>
+
+    
+    </body>
+</html>
