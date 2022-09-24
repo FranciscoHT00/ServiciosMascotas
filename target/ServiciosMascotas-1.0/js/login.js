@@ -1,23 +1,30 @@
-const nombre = document.getElementById("nombre")
-const contraseña = document.getElementById("contraseña")
-const form = document.getElementById("form")
-const parrafo = document.getElementById("warnings")
+$(document).ready(function(){
+   $("#formLogin").submit(function(){
+       event.preventDefault();
+       autenticarUsuario();
+   });
+});
 
-form.addEventListener("submit", e=>{
-    e.preventDefault()
-    let warnings = ""
-    let Ingresar = false
-    parrafo.innerHTML = ""
-    if(nombre.value.length < 6){
-        warnings += "Nombre muy corto minimo 6 caracteres<br>"
-        Ingresar = true
-    }
-    if(contraseña.value.length < 8){
-        warnings += "La contraseña no es valida<br>"
-        Ingresar = true
-    }
-
-    if(Ingresar){
-        parrafo.innerHTML = warnings
-    }
-})
+function autenticarUsuario(){
+    let username = $("#username").val();
+    let password = $("#password").val();
+    
+    $.ajax({
+        type: "GET",
+        dataType: "html",
+        url: "./ServletUsuarioLogin",
+        data: $.param({
+            username: username,
+            password: password
+        }),
+        success: function(result){
+            let parsedResult = JSON.parse(result);
+            if(parsedResult !== false){
+                let username = parsedResult['username'];
+                document.location.href = "perfil.html?username=" + username;
+            }else{
+                $("#warnings").text("Usuario y/o contraseña no válidos");
+            }
+        }
+    });
+}
