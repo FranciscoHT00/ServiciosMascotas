@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Francisco Hernandez
  */
-@WebServlet(name = "ServletUsuarioLogin", urlPatterns = {"/ServletUsuarioLogin"})
-public class ServletUsuarioLogin extends HttpServlet {
+@WebServlet(name = "ServletUsuarioRegistro", urlPatterns = {"/ServletUsuarioRegistro"})
+public class ServletUsuarioRegistro extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
-
-    public ServletUsuarioLogin() {
+    
+    public ServletUsuarioRegistro() {
         super();
     }
 
@@ -39,10 +39,10 @@ public class ServletUsuarioLogin extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletUsuarioLogin</title>");
+            out.println("<title>Servlet ServletUsuarioRegistro</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ServletUsuarioLogin at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ServletUsuarioRegistro at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,13 +60,14 @@ public class ServletUsuarioLogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         UsuarioController usuarioC = new UsuarioController();
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        boolean premium = Boolean.parseBoolean(request.getParameter("premium"));
 
-        String result = usuarioC.login(username, password);
+        String result = usuarioC.registro(username, password, email, premium);
 
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();

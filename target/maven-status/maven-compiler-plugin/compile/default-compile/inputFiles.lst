@@ -2,6 +2,7 @@ D:\NetBeans Workspace\ServiciosMascotas\src\main\java\connection\DBConnection.ja
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\beans\Cita.java
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\beans\Servicio.java
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\beans\Empleado.java
+D:\NetBeans Workspace\ServiciosMascotas\src\main\java\servlets\ServletUsuarioMostrar.java
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\beans\ListaHorario.java
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\test\OperacionesDB.java
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\controller\IUsuarioController.java
@@ -10,4 +11,5 @@ D:\NetBeans Workspace\ServiciosMascotas\src\main\java\servlets\PruebaServlet.jav
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\beans\Horario.java
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\controller\UsuarioController.java
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\beans\Usuario.java
+D:\NetBeans Workspace\ServiciosMascotas\src\main\java\servlets\ServletUsuarioRegistro.java
 D:\NetBeans Workspace\ServiciosMascotas\src\main\java\servlets\ServletUsuarioLogin.java

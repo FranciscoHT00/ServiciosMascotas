@@ -7,6 +7,8 @@
     <title>Perfil</title>
     <link rel="stylesheet" type="text/css" href="css/perfil.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -34,24 +36,43 @@
             </div>
         </div>
         <div class="perfil-usuario-body">
-            <div class="perfil-usuario-bio">
-                <h3 class="titulo">Bienvenido <br> Maria Alejandra De la Cruz</h3>
+            <form action="action">
+            <div class="perfil-usuario-bio">                                      
+                <h3 class="titulo" id="bienvenida">Bienvenido <br> Maria Alejandra De la Cruz</h3>
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
-                    <li><i class="icono fas fa-map-signs"></i> Direccion de usuario:</li>
-                    <li><i class="icono fas fa-phone-alt"></i> Telefono:</li>
-                    <li><i class="icono fas fa-briefcase"></i> Trabaja en.</li>
-                    <li><i class="icono fas fa-building"></i> Cargo</li>
+                    <li><i class="icono fas fa-user"></i>
+                    <label for="username">Nombre de usuario</label>
+                    <input type="text" value="" name="username" id="username"></li>
+                    
+                    <li><i class="icono fas fa-user"></i>                        
+                    <label for="nombres">Nombres</label>
+                    <input type="text" value="" name="nombres" id="nombres"></li>
+                    
+                    <li><i class="icono fas fa-user"></i>                        
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" value="" name="apellidos" id="apellidos"></li>
+                    
+                    <li><i class="icono fas fa-user"></i>                        
+                    <label for="email">Email</label>
+                    <input type="email" value="" name="email" id="email"></li>
                 </ul>
                 <ul class="lista-datos">
-                    <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion.</li>
-                    <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento.</li>
-                    <li><i class="icono fas fa-user-check"></i> Registro.</li>
-                    <li><i class="icono fas fa-share-alt"></i> Redes sociales.</li>
+                    <li><i class="icono fas fa-map-marker-alt"></i>
+                    <label for="direccion">Dirección</label>
+                    <input type="text" value="" name="direccion" id="direccion"></li>
+                    
+                    <li><i class="icono fas fa-wallet"></i>
+                    <label for="saldo">Saldo</label>
+                    <input type="number" value="" name="saldo" id="saldo"></li>
+                    
+                    <li><i class="icono fas fa-user-check"></i>
+                    <label for="premium">Premium</label>
+                    <input type="checkbox" value="" name="premium" id="premium"></li>
                 </ul>
             </div>
-           
+           </form>
         </div>
     </section>
 

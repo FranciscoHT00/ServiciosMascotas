@@ -10,4 +10,5 @@ beans\Perro.class
 controller\UsuarioController.class
 beans\Cita.class
 servlets\ServletUsuarioLogin.class
+servlets\ServletUsuarioRegistro.class
 connection\DBConnection.class

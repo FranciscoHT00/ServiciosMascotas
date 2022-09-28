@@ -48,7 +48,7 @@ body{
     width: 100%;
     margin-bottom: 20px;
 }
-.login-box input[type="text"],
+/*.login-box input[type="text"],
 .login-box input[type="password"]{
     border: none;
     border-bottom: 2px solid #fff;
@@ -63,6 +63,19 @@ body{
 
     .login-box input[type="text"],
 .login-box input[type="email"]{
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    text-align: center;
+
+}*/
+
+.login-box input:not(input[type="checkbox"]){
     border: none;
     border-bottom: 2px solid #fff;
     background: transparent;
@@ -118,7 +131,6 @@ button:hover {
 .warnings{
     width: 200px;
     text-align: center;
-    margin: center;
     margin: auto;
     color: rgb(255, 0, 0);
     padding-top: 20px;

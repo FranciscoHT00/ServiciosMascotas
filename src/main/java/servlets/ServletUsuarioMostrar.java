@@ -1,3 +1,4 @@
+
 package servlets;
 
 import controller.UsuarioController;
@@ -13,14 +14,16 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Francisco Hernandez
  */
-@WebServlet(name = "ServletUsuarioLogin", urlPatterns = {"/ServletUsuarioLogin"})
-public class ServletUsuarioLogin extends HttpServlet {
-
+@WebServlet(name = "ServletUsuarioMostrar", urlPatterns = {"/ServletUsuarioMostrar"})
+public class ServletUsuarioMostrar extends HttpServlet {
+    
     private static final long serialVersionUID = 1L;
 
-    public ServletUsuarioLogin() {
+    public ServletUsuarioMostrar() {
         super();
     }
+    
+    
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,10 +42,10 @@ public class ServletUsuarioLogin extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletUsuarioLogin</title>");
+            out.println("<title>Servlet ServletUsuarioMostrar</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ServletUsuarioLogin at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ServletUsuarioMostrar at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,17 +63,16 @@ public class ServletUsuarioLogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
         UsuarioController usuarioC = new UsuarioController();
 
         String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        String result = usuarioC.login(username, password);
+        
+        String usuario = usuarioC.mostrarUsuario(username);
 
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        out.print(result);
+        out.print(usuario);
         out.flush();
         out.close();
     }
